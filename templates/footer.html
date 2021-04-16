@@ -1,0 +1,84 @@
+{% load static %}
+<!-- FOOTER -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="row__relative">
+      <div class="row__relative_left">
+        <div class="span1">
+          <h5><a href=""></a>Услуги</h5>
+          <ul>
+            {% for category in categories %}
+            <li>
+              <a
+                class="small_wrap_a"
+                href="{% url 'service-list' category.slug %}"
+                >{{ category.name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="span2">
+          <h5><a href=""></a>Наши мастера</h5>
+          <ul>
+            <li><a href=""></a>asdasd</li>
+            <li><a href=""></a>asdasd</li>
+            <li><a href=""></a>asdasd</li>
+            <li><a href=""></a>asdasdasd</li>
+          </ul>
+        </div>
+      </div>
+      <div class="span3">
+        <h5><a href=""></a>Контакты</h5>
+        <p></p>
+        <div class="footer__contacts">
+          <p class="salon__contact">
+            <span class="salon__address">
+              <span>Бишкек , Касыма Тыныстанова, 20а</span>
+            </span>
+            <br />
+            Телефоны:
+            <a href="" class="salon__contact_phone">0500224422</a>
+          </p>
+        </div>
+        <p></p>
+        <div class="sos_networks_end">
+          <ul class="social_networks_end">
+            <li>
+              <a href="">
+                <img src="{% static 'img/facebook1.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/google.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/twitter.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/vk.png' %}" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer_bottom">
+    <div class="container">
+      <div class="row_end">
+        <div class="span4">
+          <p>
+            <span>Салон красоты «Upgrace Studio»</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

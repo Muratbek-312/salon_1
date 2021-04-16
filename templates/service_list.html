@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}11111{% endblock %}
+{% block body %}
+<!-- CONTENT -->
+<div class="content">
+  <div class="container">
+    <div class="salon__service">
+      <div class="salon__left_menu">
+        <div class="salon__left_menuInfo">
+          <ul class="salon__left_menu_ul">
+            {% for category in categories %}
+            <li class="salon__left_menu_ul_li">
+              <a
+                class="salon__left_a small_wrap_a"
+                href="{% url 'service-list' category.slug %}"
+                >{{ category.name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="salon__right_menu">
+        <div class="salon__right_menu_item">
+          <h1 class="salon__right_menu_h1">Услуги</h1>
+          {% if user.is_staff or user.is_superuser %}
+          <a class="service__list_cr" href="{% url 'create-service' %}">
+            <button class="service__list_btn" type="button">
+              Создать новую услугу
+            </button>
+          </a>
+          {% endif %}
+        </div>
+        <div class="js-scroll">
+          <div class="jscroll-inner">
+            <ul class="tile-4">
+              {% for service in services %}
+              <li>
+                <div class="small_wrap text-center">
+                  <a
+                    class="round"
+                    href="{% url 'service-details' service.id %}"
+                  >
+                    <img src="{{ service.img.url }}" alt="" />
+                  </a>
+                  <h5>
+                    <a
+                      class="small_wrap_a"
+                      href="{% url 'service-details' service.id %}"
+                      >{{ service.title }}</a
+                    >
+                  </h5>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

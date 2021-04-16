@@ -1,0 +1,58 @@
+
+
+body{
+  background-color: #f40536;
+}
+
+h1{
+  min-width: 445px;
+}
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.account__content{
+  display: grid;
+  justify-content: center;
+}
+
+.account__item{
+  background-color: #fff;
+  padding: 40px;
+}
+
+.account__form>p{
+  display: grid;
+  padding-block: 5px;
+}
+
+.account__form>p>label{
+  padding-block: 5px;
+}
+
+.account__form>p>input{
+  font-size: 15px;
+  height: 30px;
+}
+
+.account__form>button{
+  font-size: 20px;
+  padding: 5px;
+  background-color: #09cf06;
+}
+
+.account__form>p>select{
+  max-width: 100px;
+}
+
+@media all and (max-width: 550px) {
+  h1 {
+    min-width: 0px;
+  }
+  .account__item{
+    padding: 10px;
+  }
+}

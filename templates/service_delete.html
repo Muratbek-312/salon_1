@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% load static %} {% block title %}11111{% endblock %}
+{% block body %}
+<!-- CONTENT -->
+<div class="content">
+  <div class="container">
+    <div class="salon__service">
+      <div class="service__content">
+        <div class="service__redactor">
+          <h1 class="salon__right_menu_h1">Удаление услуги</h1>
+          <h1>Вы действительно хотите удалить услугу?</h1>
+          <form method="post">
+            {% csrf_token %}
+            <a>
+              <button type="submit">Да</button>
+            </a>
+            <a href="{% url 'service-details' service.id %}">
+              <button type="button">Отмена</button>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

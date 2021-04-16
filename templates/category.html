@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% load static %} {% block title %}11111{% endblock %}
+{% block body %}
+<!-- CONTENT -->
+<div class="content">
+  <div class="container">
+    <div class="salon__service">
+      <div class="salon__left_menu">
+        <div class="salon__left_menuInfo">
+          <ul class="salon__left_menu_ul">
+            {% for category in categories %}
+            <li class="salon__left_menu_ul_li">
+              <a
+                class="salon__left_a"
+                href="{% url 'service-list' category.slug %}"
+                >{{ category.name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="salon__right_menu">
+        <h1 class="salon__right_menu_h1">Услуги</h1>
+        <div class="js-scroll">
+          <div class="jscroll-inner">
+            <ul class="tile-4">
+              {% for category in categories %}
+              <li>
+                <div class="small_wrap text-center">
+                  <a
+                    class="round"
+                    href="{% url 'service-list' category.slug %}"
+                  >
+                    <img src="{{ category.image.url }}" alt="" />
+                  </a>
+                  <h5>
+                    <a
+                      class="small_wrap_a"
+                      href="{% url 'service-list' category.slug %}"
+                      >{{ category.name }}</a
+                    >
+                  </h5>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

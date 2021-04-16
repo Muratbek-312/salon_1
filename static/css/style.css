@@ -1,0 +1,501 @@
+*{
+  font: 14.5px/24px 'Yandex Sans Light', Arial, sans-serif;
+}
+
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+h5 {
+  font: 16px/20px 'museo_sans_cyrl300', Arial,sans-serif;
+}
+
+
+h1,.h1{
+  font: 33px/34px 'museo_sans_cyrl300', Arial,sans-serif;
+  margin: 0 0 20px;
+}
+
+a, li, span{
+  font-size: 16px;
+}
+
+ul, ol, ul li, ol li{
+  padding: 0px;
+  margin: 0px;
+}
+
+.header{
+  right: 0px;
+  left: 0px;
+  /* background-color: #D22A4D; */
+}
+
+.content{
+  margin-top: 35px;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salon__menu{
+  width: 0 auto;
+}
+
+.sos_networks{
+  margin-block: auto;
+}
+
+.social_networks{
+  display: flex;
+  justify-content: center;
+}
+
+.social_networks li{
+  margin-right: 10px;
+}
+
+.salon__networks li{
+  display: inline-block;
+  margin-left: 2px;
+  margin-bottom: 12px;
+}
+
+.container__menu{
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  background: linear-gradient(to top, #c32443, #e43159);
+  z-index: 1050;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul, li{
+  display: block;
+  margin-block: auto;
+}
+
+.menu{
+  max-width: 1000px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+/* .small_wrap>h5>a{
+  font: 16px/20px 'museo_sans_cyrl300', Arial,sans-serif;
+  text-decoration: none;
+  color: black;
+} */
+
+.small_wrap_a{
+  font: 16px/20px 'museo_sans_cyrl300', Arial,sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+
+.menu ul{
+  display: flex;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+
+.item{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+}
+
+.logo img{
+  width: 100px;
+  height: 100px;
+}
+
+.span3_order{
+  margin-left: 230px;
+  border-radius: 10px;
+  padding: 11px 26px;
+  margin-block: auto;
+  background: linear-gradient(to top, #f43d3d, #fd5e5e);
+}
+
+
+.span3__contact{
+  text-align: end;
+  margin-left: 10px;
+}
+
+.salon__address span{
+  margin-left: 10px;
+}
+
+.salon__contact_phone{
+  text-decoration: none;
+  color: #CE455A;
+}
+
+.order{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.row{
+  display: flex;
+  padding: 80px 0px 0px;
+  justify-content: space-between;
+}
+
+.salon__reklama{
+  width: auto;
+  height: 300px;
+  margin-block: 25px;
+}
+
+.salon__service{
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+}
+
+.salon__left_menu{
+  width: 370px;
+  height: 470px;
+  background-color: #F3F3F3;
+}
+
+.salon__left_menu_ul{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.salon__left_menu_ul_li{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.salon__left_a{
+  border-bottom: 2px solid white;
+  width: auto;
+  height: 50px;
+  padding: 9px 5px 9px 30px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.salon__left_menu_ul_li a{
+  text-decoration: none;
+  color: black;
+}
+
+.salon__left_a:hover{
+  text-decoration: none;
+  background-color: #D0294C;
+  color: white;
+}
+
+.salon__right_menu{
+  margin-left: 60px;
+  max-width: 770px;
+  margin: 0 60px;
+}
+
+.promo li{
+  display: flex;
+}
+
+.promo img{
+  width: 67px;
+  height: 67px;
+  margin-right: 40px;
+}
+
+#img2{
+  width: 131px;
+}
+
+.promo h4{
+  font: 19px/20px 'museo_sans_cyrl300', Arial,sans-serif;
+  margin: 10px 0;
+}
+
+
+.advantages{
+  width: 770px;
+  height: 290px;
+  background-size: cover;
+  padding: 20px 10px 40px;
+  margin: 30px 0 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background: url(../img/312.jpg) no-repeat;
+}
+
+.advantages h2{
+  width: 760px;
+  font: 33px 'museo_sans_cyrl300';
+  color: white;
+}
+
+
+.advantages div{
+  width: 760px;
+}
+
+.advantages li{
+  color: #fff;
+  font: 17px/26px 'museo_sans_cyrl300';
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 42px;
+}
+
+.advantages li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: url(../img/logo.jpg) no-repeat -210px 0;
+}
+
+.row__relative_left{
+  display: flex;
+  margin: 0;
+}
+
+.row__relative{
+  display: flex;
+  margin-block: 30px;
+  justify-content: space-between;
+}
+
+.form__create>p{
+  display: grid;
+  width: 800px;
+}
+
+/* Checkbox stars */
+.rating {
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 155px;
+  height: 30px;
+}
+
+.rating > input {
+  opacity: 0;
+  margin-right: -100%;
+}
+
+.rating > label {
+  position: relative;
+  display: block;
+  float: right;
+  background: url(../img/star-off-big.png) no-repeat;
+  background-size: 30px 30px;
+}
+
+.rating > label:before {
+  display: block;
+  opacity: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: url(../img/star-on-big.png) no-repeat;
+  background-size: 30px 30px;
+  transition: opacity 0.2s linear;
+}
+
+.rating > label:hover:before,  .rating > label:hover ~ label:before,  .rating:not(:hover) > :checked ~ label:before { opacity: 1; }
+
+
+.form__create_img{
+  display: table-caption;
+  margin-bottom: 10px;
+}
+
+.span2{
+  margin-left: 40px;
+}
+
+/* .row__relative div{
+  margin-left: 30px;
+} */
+
+
+.row__relative div h5{
+  color: #252525;
+  font: 17.73px 'FuturaBookC';
+}
+
+
+
+
+.row__relative ul, li{
+  padding: 0px;
+}
+
+.span3{
+  text-align: right;
+}
+
+.footer__contacts{
+  width: 300px;
+}
+
+
+.social_networks_end{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social_networks_end img{
+  margin-left: 10px;
+}
+
+.js-scroll{
+  max-width: 770px;
+}
+
+.jscroll-inner{
+  max-width: 770px;
+  word-wrap: break-word;
+}
+
+.service__image{
+    max-width: 350px;
+    max-height: 270px;
+}
+
+.footer_bottom {
+  background: linear-gradient(to top, #c32443, #e43159);
+  color: #fff;
+  font: 12px 'Yandex Sans Light';
+}
+
+
+.span4{
+  height: 50px;
+  display: flex;
+}
+
+
+.tile-4{
+  display: flex;
+  flex-flow: wrap;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.menu__form_a, .menu__form_li{
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+
+.small_wrap .round{
+  position: relative;
+}
+
+.small_wrap{
+  padding-inline: 20px;
+}
+
+.round {
+  display: inline-block;
+  border-radius: 90px;
+  overflow: hidden;
+  max-width: 180px;
+  max-height: 180px;
+}
+.round>img{
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.menu__form{
+  margin: 0 auto;
+  display: flex;
+}
+.menu__form_ul{
+  display: flex;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.contact p{
+  margin-bottom: 20px;
+}
+
+.salon__right_menu_h1{
+  margin-bottom: 40px;
+}
+
+.service__list_cr{
+    padding-inline: 20px;
+}
+
+.service__content{
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 60px;
+}
+
+.salon__right_menu_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.salon__right_menu_item>h1{
+  margin: 0;
+}

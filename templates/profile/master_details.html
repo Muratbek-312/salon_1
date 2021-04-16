@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% load static %} {% block body %}
+<!-- CONTENT -->
+<div class="content">
+  <div class="container">
+    <div class="salon__service">
+      <div class="salon__left_menu">
+        <div class="salon__left_menuInfo">
+          <ul class="salon__left_menu_ul">
+            {% for category in categories %}
+            <li class="salon__left_menu_ul_li">
+              <a
+                class="salon__left_a small_wrap_a"
+                href="{% url 'service-list' category.slug %}"
+                >{{ category.name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="salon__right_menu">
+        <h1 class="salon__right_menu_h1">Наши мастера</h1>
+        <div class="js-scroll">
+          <div class="jscroll-inner">
+            <img class="service__image" src="{{ masterprofile.image.url }}" />
+            <p>{{ masterprofile.id}}</p>
+            <p>{{ masterprofile.title}}</p>
+            {% if user.is_active%}
+            <form action="{% url 'add_rating' %}" method="post" name="rating">
+              <p>Rating</p>
+              {% csrf_token %}
+              <input
+                type="hidden"
+                value="{{ masterprofile.id }}"
+                name="masterprofile"
+              />
+              <span class="rating">
+                {% for k, v in star_form.fields.star.choices %}
+                <input
+                  id="rating{{ v }}"
+                  type="radio"
+                  name="star"
+                  value="{{ k }}"
+                />
+                <label for="rating{{ v }}">{{ k }}</label>
+                {% endfor %}
+              </span>
+              <span class="editContent">4.0</span>
+            </form>
+            <h1>Comment()</h1>
+            <form action="{% url 'master_details' masterprofile.id %}" method="POST">
+              {% csrf_token %}
+              {{ comment_form.as_p }}
+              <button type="submit">Comment</button>
+            </form>
+
+            {% endif %} {% if user.is_staff or user.is_superuser %}
+            <a href="{% url 'edit-master' masterprofile.id %}"
+              ><button class="service__redactor" type="button">
+                Редактировать
+              </button></a
+            >
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock body %}

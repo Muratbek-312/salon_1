@@ -1,0 +1,86 @@
+{% load static %}
+
+<!-- HEADER -->
+<header id="header" class="header">
+  <div class="container">
+    <div class="salon__menu">
+      <div class="container__menu">
+        <nav class="menu">
+          <ul>
+            <li><a href="{% url 'index-page' %}" class="item">О салоне</a></li>
+            <li><a href="{% url 'category' %}" class="item">Услуги</a></li>
+            <li>
+              <a href="{% url 'master_list' %}" class="item">Наши мастера</a>
+            </li>
+            <li><a href="" class="item">Контакты</a></li>
+          </ul>
+        </nav>
+        <nav class="menu__form">
+          <ul class="menu__form_ul">
+            {% if user.is_authenticated %}
+            <li class="menu__form_li">
+              <a class="menu__form_a" href="">{{ user }}</a>
+            </li>
+            <li class="menu__form_li">
+              <a class="menu__form_a" href="{% url 'logout' %}">Выйти</a>
+            </li>
+            {% else %}
+            <li class="menu__form_li">
+              <a class="menu__form_a" href="{% url 'login' %}">Войдите</a
+              ><a href="" class="menu__form_a">или</a
+              ><a class="menu__form_a" href="{% url 'registration' %}"
+                >Зарегистрируйтесь</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="span3 salon__logo">
+          <a href="" class="logo">
+            <img src="{% static 'img/logo.jpg' %}" alt="" />
+          </a>
+        </div>
+        <div class="span3_order">
+          <a href="" class="order">Записаться онлайн</a>
+        </div>
+        <div class="sos_networks">
+          <ul class="social_networks">
+            <li>
+              <a href="">
+                <img src="{% static 'img/facebook1.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/google.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/twitter.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="{% static 'img/vk.png' %}" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3__contact">
+          <p class="salon__contact">
+            <span class="salon__address">
+              <span>Бишкек ,</span>
+              <span>​Касыма Тыныстанова, 20а</span>
+            </span>
+            <br />
+            Телефоны:
+            <a href="" class="salon__contact_phone">0500224422</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,117 @@
+{% extends "base.html" %} {% load static %} {% block title %}11111{% endblock %}
+{% block body %}
+<!-- CONTENT -->
+<div class="content">
+  <div class="container">
+    <div class="salon__reklama">
+      <img src="{% static 'img/back.jpg' %}" alt="" />
+    </div>
+    <div class="salon__service">
+      <div class="salon__left_menu">
+        <div class="salon__left_menuInfo">
+          <ul class="salon__left_menu_ul">
+            {% for category in categories %}
+            <li class="salon__left_menu_ul_li">
+              <a class="salon__left_a" href=" {% url 'category' %} "
+                >{{ category }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="salon__right_menu">
+        <h1 class="salon__right_name">Салон красоты «Upgrace Studio»</h1>
+        <div class="salon__right_name_info">
+          <p>
+            Мы предлагаем комплекс услуг по уходу за кожей. волосами, ногтями и
+            сохранению Вашей естественной красоты.
+          </p>
+          <p>
+            Салон красоты «Upgrace Studio» предлагает лечебные процедуры для
+            волос, для лица, а также для рук, ног и всего тела.
+          </p>
+        </div>
+        <div class="h1">Мы предлагаем Вам:</div>
+        <ul class="promo">
+          <li>
+            <img src="{% static 'img/img1.png' %}" alt="" />
+            <div class="promo__comtent">
+              <h4>Создать вместе с нами свой идеалный образ</h4>
+              <p>
+                Мастера подберут для Вас идеальную причёску и цвет волос, чтобы
+                подчеркнуть естественные линии лица и сделать черты более
+                выразительными.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img id="img2" src="{% static 'img/img2.png' %}" alt="" />
+            <div class="promo__comtent">
+              <h4>Помощь профессиональных косметологов в выборе косметики</h4>
+              <p>
+                Здоровье и красота Ваших волос зависит от правильно подобранной
+                косметики. Косметика, подобранная нашими профессионалами —
+                гарантия красоты и здоровья Ваших волос.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="{% static 'img/img3.png' %}" alt="" />
+            <div class="promo__comtent">
+              <h4>Дополнительные услуги</h4>
+              <p>
+                Массаж, SPA, Солярий — в нашем салоне Вы найдете все, что
+                необходимо для отдыха, здоровья и хорошего настроения.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="advantages">
+          <h2>Наши преимущества:</h2>
+          <div>
+            <ul>
+              <li>Использование инновационной косметики</li>
+              <li>5 лет успешной работы</li>
+              <li>Сертифицированные мастера</li>
+              <li>Подарочные сертификаты и скидки постоянным клиентам</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <a
+        class="dg-widget-link"
+        href="http://2gis.kg/bishkek/firm/70000001048038041/center/74.605068,42.84453/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap"
+        >Посмотреть на карте Бишкека</a
+      >
+      <div class="dg-widget-link">
+        <a
+          href="http://2gis.kg/bishkek/center/74.605068,42.84453/zoom/16/routeTab/rsType/bus/to/74.605068,42.84453╎Upgrace, салон красоты?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route"
+          >Найти проезд до Upgrace, салон красоты</a
+        >
+      </div>
+      <script
+        charset="utf-8"
+        src="https://widgets.2gis.com/js/DGWidgetLoader.js"
+      ></script>
+      <script charset="utf-8">
+        new DGWidgetLoader({
+          width: 1200,
+          height: 300,
+          borderColor: "#a3a3a3",
+          pos: { lat: 42.84453, lon: 74.605068, zoom: 16 },
+          opt: { city: "bishkek" },
+          org: [{ id: "70000001048038041" }],
+        });
+      </script>
+      <noscript style="color: #c00; font-size: 16px; font-weight: bold"
+        >Виджет карты использует JavaScript. Включите его в настройках вашего
+        браузера.</noscript
+      >
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

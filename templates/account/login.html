@@ -1,0 +1,14 @@
+{% extends 'account/base.html' %}
+{% block title %}Войти{% endblock title %}
+{% block body %}
+    <div class="account__content">
+        <div class="account__item">
+            <h1>Войти</h1>
+            <form method="post" class="account__form">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+{% endblock body %}
